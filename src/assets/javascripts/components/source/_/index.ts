@@ -81,14 +81,19 @@ export function watchSource(
   el: HTMLAnchorElement
 ): Observable<Source> {
   return fetch$ ||= defer(() => {
-    const cached = __md_get<SourceFacts>("__source", sessionStorage)
-    if (cached)
+    const cached = __md_get<SourceFacts>(`__source_facts_${ el.href }`, sessionStorage)
+    if (cached) {
+      window.dispatchEvent(new CustomEvent('version-available', { detail: cached.version }))
       return of(cached)
-    else
+    } else {
       return fetchSourceFacts(el.href)
         .pipe(
-          tap(facts => __md_set("__source", facts, sessionStorage))
+          tap(facts => {
+            window.dispatchEvent(new CustomEvent('version-available', { detail: facts.version }))
+            __md_set(`__source_facts_${ el.href }`, facts, sessionStorage);
+          })
         )
+    }
   })
     .pipe(
       catchError(() => EMPTY),

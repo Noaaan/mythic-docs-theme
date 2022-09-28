@@ -51,7 +51,7 @@
   </label>
 
   <!-- Repository information -->
-  {% if config.repo_url %}
+  {% if page and page.meta.project %}
     <div class="md-nav__source">
       {% include "partials/source.html" %}
     </div>
