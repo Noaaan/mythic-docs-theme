@@ -6,6 +6,63 @@ template: overrides/main.html
 
 ## Material for MkDocs Insiders
 
+### 4.24.0 <small>_ September 27, 2022</small> { id="4.24.0" }
+
+- Added support for custom content on index pages (blog)
+- Added support for keeping content on paginated index pages (blog)
+- Added support for limiting categories in post excerpts (blog)
+- Added support for simple override of templates via front matter (blog)
+- Added icon in navigation for pages with encrypted content
+- Fixed #4396: Front matter of index pages not inherited by pagination (blog)
+- Improved performance by building post excerpts once (blog)
+
+### 4.23.6 <small>_ September 22, 2022</small> { id="4.23.6" }
+
+- Fixed #4389: Blog posts in first week of year in wrong archive
+- Fixed (= switched) footer previous and next links for blog posts
+
+### 4.23.5 <small>_ September 18, 2022</small> { id="4.23.5" }
+
+- Fixed #4367: Improved blog plugin date handling for MultiMarkdown syntax
+- Fixed #4374: Fixed invalid URLs of related links to other blog posts
+
+### 4.23.4 <small>_ September 14, 2022</small> { id="4.23.4" }
+
+- Fixed #4365: Recursion error in blog plugin due to `deepcopy`
+- Fixed path errors for blog plugin on Windows
+- Fixed publishing workflow in forked repositories
+
+### 4.23.3 <small>_ September 13, 2022</small> { id="4.23.3" }
+
+- Fixed previous and next page links for drafts of blog posts
+
+### 4.23.2 <small>_ September 13, 2022</small> { id="4.23.2" }
+
+- Fixed #4348: Blog plugin crashes on custom `nav` title
+- Fixed blog plugin crashing when category contained only drafts
+- Fixed rendering of content from blog index file
+
+### 4.23.1 <small>_ September 12, 2022</small> { id="4.23.1" }
+
+- Fixed #4345: Blog plugin errors with default settings
+
+### 4.23.0 <small>_ September 12, 2022</small> { id="4.23.0" }
+
+- Added blogging support via built-in blog plugin
+
+### 4.22.1 <small>_ September 7, 2022</small> { id="4.22.1" }
+
+- Fixed #4217: Tooltips in data tables render in wrong position
+
+### 4.22.0 <small>_ August 21, 2022</small> { id="4.22.0" }
+
+- Added support for navigation status
+
+### 4.21.1 <small>_ August 13, 2022</small> { id="4.21.1" }
+
+- Fixed #4176: Broken image when avatar is served by Gravatar
+- Fixed #4212: Deferred search initialization for file:// locations
+
 ### 4.21.0 <small>_ July 17, 2022</small> { id="4.21.0" }
 
 - Added meta plugin: set front matter for all pages in a folder

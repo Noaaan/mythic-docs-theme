@@ -35,9 +35,13 @@ import {
 } from "rxjs"
 
 import { getElement } from "~/browser"
+import { ConsentDefaults } from "~/components/consent"
 import { renderSourceFacts } from "~/templates"
 
-import { Component } from "../../_"
+import {
+  Component,
+  getComponentElements
+} from "../../_"
 import {
   SourceFacts,
   fetchSourceFacts
@@ -86,6 +90,15 @@ export function watchSource(
       window.dispatchEvent(new CustomEvent('version-available', { detail: cached.version }))
       return of(cached)
     } else {
+      /* Check if consent is configured and was given */
+      const els = getComponentElements("consent")
+      if (els.length) {
+        const consent = __md_get<ConsentDefaults>("__consent")
+        if (!(consent && consent.github))
+          return EMPTY
+      }
+
+      /* Fetch repository facts */
       return fetchSourceFacts(el.href)
         .pipe(
           tap(facts => {

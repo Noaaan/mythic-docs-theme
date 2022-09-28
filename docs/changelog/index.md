@@ -6,6 +6,60 @@ template: overrides/main.html
 
 ## Material for MkDocs
 
+### 8.5.3 <small>_ September 20, 2022</small> { id="8.5.3" }
+
+- Fixed build error when enabling cookie consent without analytics
+- Fixed #4381: Code blocks render ligatures for some fonts
+
+### 8.5.2 <small>_ September 18, 2022</small> { id="8.5.2" }
+
+- Updated Mermaid.js to version 9.1.7
+- Fixed overly large headlines in search results (8.5.0 regression)
+- Fixed #4358: Navigation sections appear as clickable (8.5.0 regression)
+- Fixed #4356: GitHub repository statistics fetched before cookie consent
+
+### 8.5.1 <small>_ September 15, 2022</small> { id="8.5.1" }
+
+- Fixed #4366: Removed dependencies with native extensions
+
+### 8.5.0 <small>_ September 13, 2022</small> { id="8.5.0" }
+
+- Added support for social cards
+- Added support for code annotation anchor links (deep linking)
+- Added support for code annotation comment stripping (syntax modifier)
+- Added support for sidebars scrolling automatically to active item
+- Added support for anchor following table of contents (= auto scroll)
+- Added support for tag icons
+
+### 8.4.4 <small>_ September 12, 2022</small> { id="8.4.4" }
+
+- Moved comments integration to separate partial (`comments.html`)
+
+### 8.4.3 <small>_ September 7, 2022</small> { id="8.4.3" }
+
+- Added Simple Icons to bundled icons (+2,300 icons)
+- Added support for changing edit icon
+- Moved page actions to separate partial (`actions.html`)
+- Fixed #4291: Version switching doesn't stay on page when anchors are used
+- Fixed #4327: Links in data tables do not receive link styling
+
+### 8.4.2 <small>_ August 27, 2022</small> { id="8.4.2" }
+
+- Updated Slovenian translations
+- Fixed #4277: Feedback widget hidden after navigation with instant loading
+- Fixed numeric tags in front matter breaking search functionality
+
+### 8.4.1 <small>_ August 21, 2022</small> { id="8.4.1" }
+
+- Updated Croatian and Hebrew translations
+
+### 8.4.0 <small>_ August 13, 2022</small> { id="8.4.0" }
+
+- Added support for cookie consent
+- Added support for feedback widget (Was this page helpful?)
+- Added support for dismissable announcement bar
+- Added Armenian, Lithuanian, Tagalog, and Urdu translations
+
 ### 8.3.9 <small>_ July 4, 2022</small> { id="8.3.9" }
 
 - Updated Taiwanese translations for search
