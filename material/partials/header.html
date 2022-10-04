@@ -72,7 +72,7 @@
       </label>
       {% include "partials/search.html" %}
     {% endif %}
-    {% if config.repo_url %}
+    {% if page and page.meta.project %}
       <div class="md-header__source">
         {% include "partials/source.html" %}
       </div>

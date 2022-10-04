@@ -23,6 +23,21 @@
       {% endif %}
       <link rel="icon" href="{{ config.theme.favicon | url }}">
       <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-8.5.3">
+      {% if page and page.meta.project %}
+        {% set project_meta = config.extra.projects[page.meta.project] %}
+        <meta content="{{ page.meta.title }}" property="og:title">
+        <meta content="Wisp Forest" property="og:site_name">
+        {% if page.meta.summary %}
+          <meta content="{{ page.meta.summary }}" property="og:description">
+        {% else %}
+          <meta content="{{ project_meta.name + ' Documentation ' }}" property="og:description">
+        {% endif %}
+	{% if project_meta.icon %}
+	  <meta content="https://docs.wispforest.io/assets/{{ project_meta.icon }}" property="og:image">
+	{% else %}
+          <meta content="https://docs.wispforest.io/assets/icon.png" property="og:image">
+	{% endif %}
+      {% endif %}
     {% endblock %}
     {% block htmltitle %}
       {% if page.meta and page.meta.title %}
@@ -245,7 +260,7 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.e21f8df8.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.9b79c69a.min.js' | url }}"></script>
       {% for path in config.extra_javascript %}
         <script src="{{ path | url }}"></script>
       {% endfor %}
