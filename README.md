@@ -1,3 +1,8 @@
+## Wisp Forest Docs Theme
+This is a slightly modified version of the excellent Material for MkDocs theme with alterations that would not be possible through theme extension. This repo is mostly identical other than those changes and the removed workflows - find the original readme below
+
+***
+
 <p align="center">
   <a href="https://squidfunk.github.io/mkdocs-material/">
     <img src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/logo.svg" width="320" alt="Material for MkDocs">
