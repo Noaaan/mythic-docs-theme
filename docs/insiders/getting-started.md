@@ -150,7 +150,7 @@ pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-materi
 
 ## Caveats
 
-This sections describes some aspects to consider when using Insiders together
+This section describes some aspects to consider when using Insiders together
 with Material for MkDocs to ensure that users without access to Insiders can
 still build your documentation.
 
@@ -199,7 +199,7 @@ mkdocs build --config-file mkdocs.insiders.yml
           social: {}
         ```
 
-    === ":octicons-file-code-16  `mkdocs.yml`"
+    === ":octicons-file-code-16: `mkdocs.yml`"
 
         ``` yaml
         # Additional configuration above

@@ -288,7 +288,15 @@ will stretch to the full width of the viewport, e.g. on mobile viewports.
 ### Supported types
 
 Following is a list of type qualifiers provided by Material for MkDocs, whereas
-the default type, and thus fallback for unknown type qualifiers, is `note`:
+the default type, and thus fallback for unknown type qualifiers, is `note`[^1]:
+
+  [^1]:
+    Previously, some of the supported types defined more than one qualifier.
+    For example, authors could use `summary` or `tldr` as alternative qualifiers
+    to render an [`abstract`](#type:abstract) admonition. As this increased the
+    size of the CSS that is shipped with Material for MkDocs, the additional
+    type qualifiers are now all deprecated and will be removed in the next major
+    version. This will also be mentioned in the upgrade guide.
 
 [`note`](#type:note){ #type:note }
 
@@ -298,7 +306,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`abstract`](#type:abstract){ #type:abstract }, `summary`, `tldr`
+[`abstract`](#type:abstract){ #type:abstract }
 
 :   !!! abstract
 
@@ -306,7 +314,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`info`](#type:info){ #type:info }, `todo`
+[`info`](#type:info){ #type:info }
 
 :   !!! info
 
@@ -314,7 +322,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`tip`](#type:tip){ #type:tip }, `hint`, `important`
+[`tip`](#type:tip){ #type:tip }
 
 :   !!! tip
 
@@ -322,7 +330,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`success`](#type:success){ #type:success }, `check`, `done`
+[`success`](#type:success){ #type:success }
 
 :   !!! success
 
@@ -330,7 +338,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`question`](#type:question){ #type:question }, `help`, `faq`
+[`question`](#type:question){ #type:question }
 
 :   !!! question
 
@@ -338,7 +346,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`warning`](#type:warning){ #type:warning }, `caution`, `attention`
+[`warning`](#type:warning){ #type:warning }
 
 :   !!! warning
 
@@ -346,7 +354,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`failure`](#type:failure){ #type:failure }, `fail`, `missing`
+[`failure`](#type:failure){ #type:failure }
 
 :   !!! failure
 
@@ -354,7 +362,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`danger`](#type:danger){ #type:danger }, `error`
+[`danger`](#type:danger){ #type:danger }
 
 :   !!! danger
 
@@ -378,7 +386,7 @@ the default type, and thus fallback for unknown type qualifiers, is `note`:
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
-[`quote`](#type:quote){ #type:quote }, `cite`
+[`quote`](#type:quote){ #type:quote }
 
 :   !!! quote
 
@@ -387,6 +395,46 @@ the default type, and thus fallback for unknown type qualifiers, is `note`:
         purus auctor massa, nec semper lorem quam in massa.
 
 ## Customization
+
+### Classic admonitions
+
+Prior to version [:octicons-tag-24: 8.5.6][Admonition modern], admonitions had
+a slightly different appearance:
+
+!!! classic "Note"
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+If you want to restore this appearance, add the following CSS to an
+[additional style sheet]:
+
+<style>
+  .md-typeset .admonition.classic {
+    border-width: 0;
+    border-left-width: 4px;
+  }
+</style>
+
+=== ":octicons-file-code-16: `docs/stylesheets/extra.css`"
+
+    ``` css
+    .md-typeset .admonition,
+    .md-typeset details {
+      border-width: 0;
+      border-left-width: 4px;
+    }
+    ```
+
+=== ":octicons-file-code-16: `mkdocs.yml`"
+
+    ``` yaml
+    extra_css:
+      - stylesheets/extra.css
+    ```
+
+[Admonition modern]: https://github.com/squidfunk/mkdocs-material/releases/tag/8.5.6
 
 ### Custom admonitions
 
