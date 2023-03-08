@@ -1,5 +1,7 @@
-## Wisp Forest Docs Theme
-This is a slightly modified version of the excellent Material for MkDocs theme with alterations that would not be possible through theme extension. This repo is mostly identical other than those changes and the removed workflows - find the original readme below
+## Mythic Metals Wiki Theme
+This is a slightly modified version of the excellent [Material for MkDocs theme](https://github.com/squidfunk/mkdocs-material) with alterations that would not be possible through theme extension. This repo is at the same time adapted from the [Wisp Forest Material theme](https://github.com/wisp-forest/docs-theme). With the changes in mind this repo is mostly identical to the original, except it has removed workflows.
+
+The original README of the repo is below.
 
 ***
 
