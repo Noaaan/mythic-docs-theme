@@ -28,8 +28,13 @@
         <meta content="{{ page.meta.title }}" property="og:title">
         <meta content="Mythic Metals Wiki" property="og:site_name">
         <meta content="https://wiki.mythicmetals.com/assets/icon.png" property="og:image">
-        <meta content="{{ page.meta.summary }}" property="og:description">
+        {% if project_meta.armor}
+          <meta content="{{ page.meta.summary}} \n {{page.meta.armor-stats}}" property="og:description">
+          {% else %}
+          <meta content="{{ page.meta.summary }}" property="og:description">
+        {% endif %}
       {% endif %}
+    
     {% endblock %}
     {% block htmltitle %}
       {% if page.meta and page.meta.title %}
