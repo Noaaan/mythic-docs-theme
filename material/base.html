@@ -27,17 +27,16 @@
         {% set project_meta = config.extra.projects[page.meta.project] %}
         <meta content="{{ page.meta.title }}" property="og:title">
         <meta content="Mythic Metals Wiki" property="og:site_name">
-		{% if page.meta.icon %}
-		  <meta content="https://wiki.mythicmetals.com/assets/icon/{{page.meta.icon}}" property="og:image">
-		{% else %}
-        <meta content="https://wiki.mythicmetals.com/assets/icon.png" property="og:image">
-		{% endif %}
+        {% if page.meta.icon %}
+          <meta content="https://wiki.mythicmetals.com/assets/icon/{{page.meta.icon}}" property="og:image">
+        {% elif page.meta.armor-model %}
+          <meta content="https://wiki.mythicmetals.com/assets/armor-models/256/{{page.meta.armor-model}}" property="og:image">
+        {% else %}
+          <meta content="https://wiki.mythicmetals.com/assets/icon.png" property="og:image">
+        {% endif %}
 
-    {% if page.meta.armor-model %}
-      <meta content="https://wiki.mythicmetals.com/assets/armor-models/256/{{page.meta.armor-model}}" property="og:image">
-      {% endif %}
-	    <meta content="{{ page.meta.summary }}" property="og:description">
-      {% endif %}
+    <meta content="{{ page.meta.summary }}" property="og:description">
+    {% endif %}
     
     {% endblock %}
     {% block htmltitle %}
