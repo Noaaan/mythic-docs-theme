@@ -29,12 +29,13 @@
         <meta content="Mythic Metals Wiki" property="og:site_name">
 		{% if page.meta.icon %}
 		  <meta content="https://wiki.mythicmetals.com/assets/icon/{{page.meta.icon}}" property="og:image">
-    {% if page.meta.armor-model %}
-		  <meta content="https://wiki.mythicmetals.com/assets/armor-models/256/{{page.meta.armor-model}}" property="og:image">
 		{% else %}
-          <meta content="https://wiki.mythicmetals.com/assets/icon.png" property="og:image">
+        <meta content="https://wiki.mythicmetals.com/assets/icon.png" property="og:image">
 		{% endif %}
-        
+
+    {% if page.meta.armor-model %}
+      <meta content="https://wiki.mythicmetals.com/assets/armor-models/256/{{page.meta.armor-model}}" property="og:image">
+      {% endif %}
 	    <meta content="{{ page.meta.summary }}" property="og:description">
       {% endif %}
     
